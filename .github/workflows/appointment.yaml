@@ -45,4 +45,4 @@ jobs:
 
         # If there is a file free-days.png, then it is mean that exist a appointment free, then github will fail and will be send an email!
       - name: Checking if there is an appointment available
-        run: if [[ ! -f cypress/screenshots/language_course_appointment.js/free-days.png ]]; then ls broken_pipeline; fi
+        run: if [[ -f cypress/screenshots/language_course_appointment.js/free-days.png ]]; then ls broken_pipeline; fi
